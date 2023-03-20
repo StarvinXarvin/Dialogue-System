@@ -18,7 +18,7 @@ Dialogue systems have been present since the early days. They were a way to conv
 
  A very good example of this is the original _The Legend of Zelda (1986)_, where you would often encounter characters that would shortly engage with you, without expecting a response. These small bits of dialogue give tips to the player while simultaneously adding to the worldbuilding of the game.
  
-![zelda1](https://github.com/StarvinXarvin/Dialog-System/docs/zelda1.jpg)
+![zelda1](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/zelda1.jpg)
 
 ![Zelda2](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/Zelda2.gif)
  
