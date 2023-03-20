@@ -2,3 +2,5 @@ title: Dialogue System
 description: My name is Xavi Alcañiz, and I'm a Videogame Development student at CITM. This repository offers an explanation of dialog systems, what types are there, examples of good dialogue in videogames, and a small program that shows how to implement a simple branching dialogue in a C++ application.
 show_downloads: [true]
 remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
