@@ -2,7 +2,7 @@
 
 ### Links
 
-[Webpage](https://starvinxarvin.github.io/Dialog-System/)
+[Webpage](https://starvinxarvin.github.io/Dialogue-System/)
 
 [Presentation](https://docs.google.com/presentation/d/1tNQS8tJNmZ-b04g73FLQbTXMgvRYhUNoxCiMK42VSF0/edit?usp=sharing)
        
