@@ -1,4 +1,4 @@
-# Dialog System
+# Dialogue System
 
 ### Links
 
@@ -6,13 +6,13 @@
 
 [Presentation](https://docs.google.com/presentation/d/1tNQS8tJNmZ-b04g73FLQbTXMgvRYhUNoxCiMK42VSF0/edit?usp=sharing)
        
-## What are dialog systems?
+## What are dialogue systems?
 
-Dialog systems are a crucial element of most videogames. Like in books or movies, dialogue is one of the primary ways of informing the viewer of how the world before their eyes is, or how the characters involved are. However, in videogames, there is an extra layer to dialogue: The viewer can directly engage with it. The player embodies the character or characters themselves.
+Dialogue systems are a crucial element of most videogames. Like in books or movies, dialogue is one of the primary ways of informing the viewer of how the world before their eyes is, or how the characters involved are. However, in videogames, there is an extra layer to dialogue: The viewer can directly engage with it. The player embodies the character or characters themselves.
 
 Let’s get more specific. 
 
-Dialog systems have been present since the early days. They were a way to convey information to the player. Instead of having some random faceless UI telling you what to do, they had a tiny person giving you advice on how to do your quest. However, there are two types of general dialogue systems: Linear dialogue and branching dialogue.
+Dialogue systems have been present since the early days. They were a way to convey information to the player. Instead of having some random faceless UI telling you what to do, they had a tiny person giving you advice on how to do your quest. However, there are two types of general dialogue systems: Linear dialogue and branching dialogue.
 
 ### Linear dialogue
 
