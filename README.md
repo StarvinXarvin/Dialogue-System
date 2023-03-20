@@ -155,11 +155,17 @@ Something that would work better for more extensive dialogue systems with more i
 Another thing that is worth noting is that the progress stage and the dialogue that is currently set in the sentenceQueue could be saved in a .xml file so that the progress is kept once you close and reopen the program. 
 
 ## WEBGOGRAPHY
+
 https://www.gamedeveloper.com/design/defining-dialogue-systems
+
 https://en.wikipedia.org/wiki/Dialogue_tree
+
 https://avilgor.github.io/DialogSystem/
+
 https://atenea.upc.edu/pluginfile.php/4743894/mod_resource/content/1/Project%209%20-%20Fonts.pdf
+
 https://atenea.upc.edu/pluginfile.php/5152584/mod_resource/content/1/L15_GUI_System.pdf
+
 https://www.youtube.com/watch?v=_nRzoTzeyxU&ab_channel=Brackeys
 
 
