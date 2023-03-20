@@ -16,13 +16,13 @@ Dialog systems have been present since the early days. They were a way to convey
 
 ### Linear dialogue
 
- A very good example of this is the original 1986 The Legend of Zelda, where you would often encounter characters that would shortly engage with you, without expecting a response. These small bits of dialogue give tips to the player while simultaneously adding to the worldbuilding of the game.
+ A very good example of this is the original _The Legend of Zelda (1986)_, where you would often encounter characters that would shortly engage with you, without expecting a response. These small bits of dialogue give tips to the player while simultaneously adding to the worldbuilding of the game.
  
 ![zelda1](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/zelda1.jpg)
 
 ![Zelda2](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/Zelda2.gif)
  
-One could assume that linear dialogue is something of the past, since hardware was still primitive and memory was scarce, not allowing storing many lines of dialogue, but linear dialogue is still present in many games nowadays. Actual best-selling triple A games like Grand Theft Auto V. 
+One could assume that linear dialogue is something of the past, since hardware was still primitive and memory was scarce, not allowing storing many lines of dialogue, but linear dialogue is still present in many games nowadays. Actual best-selling triple A games like _Grand Theft Auto V (2013)_. 
 
 Although there are some points in the story where dialogue branches out, 90% of this game’s dialogue is linear. There are no text boxes, it’s all voice acting, but it’s still a linear dialogue system. Characters often fall into conversations while driving to a mission, sometimes they get phone calls or there may be an interaction with some street NPC after you “accidentally” blow up their car.
 
@@ -36,7 +36,7 @@ Branching dialogue differs from linear dialogue in the player’s ability to cho
 
 Dialogue can be made infinitely complex, therefore the amount of options and outcomes of a videogame’s dialogue widely varies. 
 
-Let’s take an example of a very simple branching dialogue system with Rockstar’s Red Dead Redemption 2(2018).
+Let’s take an example of a very simple branching dialogue system with Rockstar’s _Red Dead Redemption 2(2018)_.
  
 ![Rdr1](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/Rdr1.jpg)
 
@@ -44,9 +44,9 @@ Let’s take an example of a very simple branching dialogue system with Rockstar
 
 ![Rdr3](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/Rdr3.jpg)
  
-In this game, we play as Arthur Morgan, a ninteenth century northamerican bandit, whose development throughout the game is reconsidering the ethics of his criminal lifestyle, and realizing that the crew he has been in his whole life is slowly showing its true colors, as well as falling apart. Given that this game is a prequel to Red Dead Redemption (2010), the game’s ending regardless of your choices must be very similar, so the dialog system of this game does not allow for much freedom. Your actions do influence some moments of the game, but they don’t really do much in the grand scheme of things. In a smaller scale, though, when interacting with an NPC, you often get the option to be nice, be a jerk, or straight up threatening to rob them. In those situations, what you pick decides if you are going to get a bullet through your skull or not. 
+In this game, we play as Arthur Morgan, a ninteenth century northamerican bandit, whose development throughout the game is reconsidering the ethics of his criminal lifestyle, and realizing that the crew he has been in his whole life is slowly showing its true colors, as well as falling apart. Given that this game is a prequel to _Red Dead Redemption (2010)_, the game’s ending regardless of your choices must be very similar, so the dialog system of this game does not allow for much freedom. Your actions do influence some moments of the game, but they don’t really do much in the grand scheme of things. In a smaller scale, though, when interacting with an NPC, you often get the option to be nice, be a jerk, or straight up threatening to rob them. In those situations, what you pick decides if you are going to get a bullet through your skull or not. 
 
-Now, a game with multiple complex dialogue options would be Fallout New Vegas, often praised by its smart writing and characterisation. 
+Now, a game with multiple complex dialogue options would be _Fallout New Vegas (2010)_, often praised by its smart writing and characterisation. 
  
 ![fallout1](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/fallout1.jpg)
 
@@ -54,9 +54,9 @@ Now, a game with multiple complex dialogue options would be Fallout New Vegas, o
 
 In this game, dialog does two things right: First, it gives a lot of personality to both the main character and the side characters, leading to fun interactions and engaging into the story. And secondly, it affects and is affected by your stats. Using certain dialogue options may increase stats, and high stats may also make you more likely to get out of a tough situation using only words.
 
-Now, for another example, here is a game that had a protagonist of few words yet managed to have quite an intricate and extensive dialogue tree: Undertale. 
+Now, for another example, here is a game that had a protagonist of few words yet managed to have quite an intricate and extensive dialogue tree: _Undertale (2015)_. 
 
-Undertale is also famous for having charming and witty dialogue, but dialogue choices don’t really matter at the end of the game. What does matter are your actions. Killing certain characters, entering certain areas or doing certain puzzles leads to new exchanges with characters that add to both the replayability value and the worldbuilding. The game has 3 main routes, but in one of them, the neutral run, which is also the one with the most variation within it, has more than 20 different dialogue strings. For example here, in the same route, Sans may give you an uplifting farewell or actively threatening you if you ever cross paths with him again. 
+_Undertale_ is also famous for having charming and witty dialogue, but dialogue choices don’t really matter at the end of the game. What does matter are your actions. Killing certain characters, entering certain areas or doing certain puzzles leads to new exchanges with characters that add to both the replayability value and the worldbuilding. The game has 3 main routes, but in one of them, the neutral run, which is also the one with the most variation within it, has more than 20 different dialogue strings. For example here, in the same route, Sans may give you an uplifting farewell or actively threatening you if you ever cross paths with him again. 
  
 ![Undertale1](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/Undertale1.png)
 
@@ -66,15 +66,15 @@ Undertale is also famous for having charming and witty dialogue, but dialogue ch
  
 ### Unusual dialogue approaches
 
-Whenever I think of a game with a dialogue like I have never seen before, I think of façade (2006). 
+Whenever I think of a game with a dialogue like I have never seen before, I think of _Façade (2006)_. 
 
-Façade consists of you, the player, visiting a couple for dinner. But the thing is, you don’t have dialogue options. You can actually write anything you want, and they will try to understand you, although 99% of time it will end with them fighting. There are ways to win the game, but you have to carefully think what you are going to say to them. But it’s always fun to start rambling and see how these two react to you and to one another.
+_Façade_ consists of you, the player, visiting a couple for dinner. But the thing is, you don’t have dialogue options. You can actually write anything you want, and they will try to understand you, although 99% of time it will end with them fighting. There are ways to win the game, but you have to carefully think what you are going to say to them. But it’s always fun to start rambling and see how these two react to you and to one another.
  
 ![Facade1](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/Facade1.gif)
 
 ![Facade2](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/Facade2.gif)
 
-Another, less bizarre, approach is the one of Dinner with an Owl (2021). 
+Another, less bizarre, approach is the one of _Dinner with an Owl (2021)_. 
 
 In this game, you visit the house of the Eerie “Mr Brown”, a man you initially went to discuss business with, but he is an anthropomorphic owl. He lives with some other people, but they seem rather uncomfortable. You start talking to them, and they tell you that Mr Brown is dangerous, so you end up grabbing a knife and killing him. However, when you kill him, you become an owl yourself. And the next day, another employee arrives, and you play as him. Basically, the game traps you in a loop that you need to get out of, and the only way to get out is by talking to all the NPCs to figure out what you need to do. By exploring dialogue options, you end up discovering how to exit the house and free the people in it.  
  
