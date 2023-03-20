@@ -22,7 +22,9 @@ Dialog systems have been present since the early days. They were a way to convey
 
 ![Zelda2](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/Zelda2.gif)
  
-One could assume that linear dialogue is something of the past, since hardware was still primitive and memory was scarce, not allowing storing many lines of dialogue, but linear dialogue is still present in many games nowadays. Actual best-selling triple A games like Grand Theft Auto V. Although there are some points in the story where dialogue branches out, 90% of this game’s dialogue is linear. There are no text boxes, it’s all voice acting, but it’s still a linear dialogue system. Characters often fall into conversations while driving to a mission, sometimes they get phone calls or there may be an interaction with some street NPC after you “accidentally” blow up their car.
+One could assume that linear dialogue is something of the past, since hardware was still primitive and memory was scarce, not allowing storing many lines of dialogue, but linear dialogue is still present in many games nowadays. Actual best-selling triple A games like Grand Theft Auto V. 
+
+Although there are some points in the story where dialogue branches out, 90% of this game’s dialogue is linear. There are no text boxes, it’s all voice acting, but it’s still a linear dialogue system. Characters often fall into conversations while driving to a mission, sometimes they get phone calls or there may be an interaction with some street NPC after you “accidentally” blow up their car.
 
 ![Gta1](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/Gta1.jpg)
 
