@@ -1,6 +1,6 @@
 # Dialog System
 
-Everything you need to know here https://github.com/StarvinXarvin/Dialog-System/wiki
+Everything you need to know here https://starvinxarvin.github.io/Dialog-System/
 
 Presentation here https://docs.google.com/presentation/d/1tNQS8tJNmZ-b04g73FLQbTXMgvRYhUNoxCiMK42VSF0/edit?usp=sharing
 
