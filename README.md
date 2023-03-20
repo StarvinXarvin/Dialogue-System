@@ -1,13 +1,11 @@
 # Dialog System
 
-Everything you need to know here https://starvinxarvin.github.io/Dialog-System/
+### Links
 
-Presentation here https://docs.google.com/presentation/d/1tNQS8tJNmZ-b04g73FLQbTXMgvRYhUNoxCiMK42VSF0/edit?usp=sharing
-
-NOTES: firstOption should be deleted in the cleanup of dialogueManager.cpp
-       Dialogues are set to pointers, but should be set as regular dialogues to prevent memory leaks
+[Webpage](https://starvinxarvin.github.io/Dialog-System/)
+[Presentation](https://docs.google.com/presentation/d/1tNQS8tJNmZ-b04g73FLQbTXMgvRYhUNoxCiMK42VSF0/edit?usp=sharing)
        
-       ## What are dialog systems?
+## What are dialog systems?
 
 Dialog systems are a crucial element of most videogames. Like in books or movies, dialogue is one of the primary ways of informing the viewer of how the world before their eyes is, or how the characters involved are. However, in videogames, there is an extra layer to dialogue: The viewer can directly engage with it. The player embodies the character or characters themselves.
 Let’s get more specific. 
@@ -153,6 +151,9 @@ After all of this is done, the end result should perform the dialog tree formati
 
 Something that would work better for more extensive dialogue systems with more intricate connections and stage progressions would be actual tree data types composed of nodes with parent, child and siblings that can be traveled more easily. With a small dialogue like this, a switch works fine and is faster to do, but on the long term, perhaps a tree would be the wisest option.
 Another thing that is worth noting is that the progress stage and the dialogue that is currently set in the sentenceQueue could be saved in a .xml file so that the progress is kept once you close and reopen the program. 
+### Small issues
+* "firstOption" should be deleted in the CleanUp of DialogueManager.cpp
+* Dialogues are set to pointers, but should be set as regular dialogues to prevent memory leaks
 
 ## WEBGOGRAPHY
 
