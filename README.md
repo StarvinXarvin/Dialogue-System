@@ -108,7 +108,6 @@ This code is structured in “TODOs”. Basically, the reader will be commanded 
 First of all, let’s explain the code. The only files that will be needed are DialogueManager.cpp, DialogueManager.h and GuiButton.cpp.
 
 ```cpp
-
 class Dialogue {
 
 public:
@@ -124,24 +123,73 @@ public:
    List<SString>* sentenceList;
    
 };
-
 ```
-
-![](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/claseDialogo.png?raw=true)
  
 The “Dialogue” class has a list of strings, which will be the sentences that will be displayed. In this code, space will be used to further the dialogue and change the sentence. When we reach the end of the list, the dialogue ends, and after it, one of three things can happen: The textbox closes and the dialogue ends, we are presented with a selection of options, or another dialogue takes its place. 
 
 We manage all of these dialogues in the dialogue manager. There, we have declared a bunch of dialogues that we will use in the interaction we are going to code. 
- 
-![](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/DeclaracionDialogo1.png?raw=true)
 
-![](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/DeclaracionDialogo2.png?raw=true)
+```cpp
+	Dialogue firstQuestion;
+	Dialogue firstOption;
+	Dialogue answerA;
+	Dialogue answerB;
+	Dialogue firstQuestionA;
+	Dialogue firstQuestionB;
+ ```
+ 
+ ```cpp
+ 	firstQuestion.sentenceList->Add("MAY I INTEREST YOU IN A GLASS OF MILK, COOKIES AND A BALL OF YOUR FAVORITE ICE CREAM FLAVOR? OR PERHAPS YOU'D RATHER GO TO BED ALREADY, SIR?");
+
+	firstOption.sentenceList->Add("/PRESS 1/ FOOD");
+	firstOption.sentenceList->Add("/PRESS 2/ BED");
+
+	answerA.sentenceList->Add("PERFECT! I WILL PREPARE YOUR FOOD RIGHT AWAY, SIR.");
+
+	answerB.sentenceList->Add("GREAT! LET ME GET THE KEY TO YOUR ROOM AND YOU WILL BE ALL SET, SIR.");
+```
 
 In  the dialogue manager, we also have some auxiliary variables and functions, all declared in dialogueManager.h and then defined in dialogueManager.cpp
- 
-![](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/variablesManager.png?raw=true)
 
-![](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/metodosManager.png?raw=true)
+
+```cpp
+public:
+
+	DialogueManager();
+
+	virtual ~DialogueManager();
+       
+       // Called before the first frame
+       bool Start();
+
+       bool Update(float dt);
+
+       bool Draw(SString s);
+
+       // Called before quitting
+       bool CleanUp();
+
+       bool DrawTextbox();
+
+       bool DrawText(SString s, uint yoffset);
+
+       bool SetDialogue(Dialogue dialogue);
+
+       bool UpdateDialogue();
+
+       bool ResetDialogue();
+       
+public:
+
+	bool dialogueEnabled;
+	ListItem<SString>* sentenceQueue;
+	SString playerName;
+	uint rows = 3;
+	SDL_Rect textbox;
+	int fontId;
+	DialogueProgress progress;
+	int questionEnabled;
+```
  
 Now, let’s start with the TODOs. 
 ### TODO 1 [Button.cpp]: 
@@ -150,22 +198,56 @@ The first step should be setting the dialogue triggers.
 * Button with ID = 2 should reset dialogue
 * Hint: Check DialogueManager.h for potential variables or functions with similar names.
 
-![](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/todo1.png?raw=true)
+```cpp
+//TODO 1: id 1 must enable dialogue and id 2 must reset dialogue
+if (this->id == 1) {
+       app->dialogueManager->dialogueEnabled = true;
+}
+if (this->id == 2) {
+       app->dialogueManager->ResetDialogue();
+}
+//
+```
  
 ### TODO 2 [DialogueManager.cpp]:
 The second step should be drawing the textbox and the text through the renderer, which is already implemented in the app with its own functions. 
 * First If statement, the textbox and the current dialogue text should be drawn. 
 * Second if statement, in case of a question, the options should be drawn under the current text.
 * Hint: Keep in mind this options are not inside the senteceQueue. 
- 
-![](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/todo2.png?raw=true)
+
+```cpp
+if (dialogueEnabled) {
+       //TODO 2: Draw the Textbox and the Text in front of it
+       DrawTextbox();
+       DrawText(sentenceQueue->data, 0);
+       //
+}
+
+if (questionEnabled) {
+       //TODO 2: Draw the Text of option 1 and 2
+       DrawText(firstOption.sentenceList->start->data, 80);
+       DrawText(firstOption.sentenceList->start->next->data, 100);
+       //
+```
 
 ### TODO 3: [DialogueManager.cpp]:
 The third step would be implementing the ability to choose between two options. 
 * We will use the keys 1 and 2, detect each input
 * For each case, set the progress data type (dialogueProgress enum) to its respective stage and then update the dialogue.
- 
-![](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/todo3.png?raw=true)
+
+```cpp
+//TODO 3: Detect if 1 or 2 are being pressed, and for each case, set the progress stage we are in and update the dialogue
+if (app->input->GetKey(SDL_SCANCODE_1) == KEY_DOWN) {
+       progress = ANSWERA;
+       UpdateDialogue();
+}
+
+if (app->input->GetKey(SDL_SCANCODE_2) == KEY_DOWN) {
+       progress = ANSWERB;
+       UpdateDialogue();
+}
+//
+```
 
 ### TODO 4: [DialogueManager.cpp]:
 The fourth step would be implementing each progress case. 
@@ -174,14 +256,44 @@ The fourth step would be implementing each progress case.
   altered “greeting” stage
 * The greeting stages should set the dialogue to their respective greeting dialogues, and since they are the final frontier, they should disable 
   dialogue. 
-
-![](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/todo4.png?raw=true)
+  
+```cpp
+switch (progress) {
+       //TODO 4: Write each case
+case GREETING:
+       questionEnabled = true;
+       break;
+case ANSWERA:
+       SetDialogue(answerA);
+       questionEnabled = false;
+       progress = GREETINGA;
+       break;
+case ANSWERB:
+       SetDialogue(answerB);
+       questionEnabled = false;
+       progress = GREETINGB;
+       break;
+case GREETINGA:
+       SetDialogue(firstQuestionA);
+       dialogueEnabled = false;
+       break;
+case GREETINGB:
+       SetDialogue(firstQuestionB);
+       dialogueEnabled = false;
+       break;
+       //
+}
+```
  
 ### TODO 5: [DialogueManager.cpp]:
 The final step is substituting the “TRAVELER” in the first “firstQuestion” string by the name of the player (“playerName”).
 * Hint: + operator works with strings
 
-![](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/todo5.png?raw=true)
+```cpp
+//TODO 5: Substitute "Traveler" by "playerName"
+firstQuestion.sentenceList->Add((SString)"GREETINGS, " + playerName + "! I SEE YOU ARE VERY TIRED FROM YOUR ADVENTURES.");
+//
+```
  
 ### FINAL RESULT
 After all of this is done, the end result should perform the dialog tree formation expressed in the drawing we saw before and it should look like this.
