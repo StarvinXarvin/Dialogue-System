@@ -295,18 +295,18 @@ firstQuestion.sentenceList->Add((SString)"GREETINGS, " + playerName + "! I SEE Y
 //
 ```
  
-### FINAL RESULT
+### Final Result
 After all of this is done, the end result should perform the dialog tree formation expressed in the drawing we saw before and it should look like this.
  
 ![](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/Resultado%20final.png?raw=true)
 
-## POTENTIAL IMPROVEMENTS
+## Potential Improvements
 
 Something that would work better for more extensive dialogue systems with more intricate connections and stage progressions would be actual tree data types composed of nodes with parent, child and siblings that can be traveled more easily. With a small dialogue like this, a switch works fine and is faster to do, but on the long term, perhaps a tree would be the wisest option.
 
 Another thing that is worth noting is that the progress stage and the dialogue that is currently set in the sentenceQueue could be saved in a .xml file so that the progress is kept once you close and reopen the program. 
 
-## WEBGOGRAPHY
+## References
 
 https://www.gamedeveloper.com/design/defining-dialogue-systems
 
