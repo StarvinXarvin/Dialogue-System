@@ -306,10 +306,6 @@ Something that would work better for more extensive dialogue systems with more i
 
 Another thing that is worth noting is that the progress stage and the dialogue that is currently set in the sentenceQueue could be saved in a .xml file so that the progress is kept once you close and reopen the program. 
 
-### Small issues
-* "firstOption" should be deleted in the CleanUp of DialogueManager.cpp (Already patched)
-* Dialogues are set to pointers, but should be set as regular dialogues to prevent memory leaks (Already patched)
-
 ## WEBGOGRAPHY
 
 https://www.gamedeveloper.com/design/defining-dialogue-systems
