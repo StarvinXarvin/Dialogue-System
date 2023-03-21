@@ -65,8 +65,8 @@ bool DialogueManager::Update(float dt)
 
 	if (questionEnabled) {
 		//TODO 2: Draw the Text of option 1 and 2
-		DrawText(firstOption->sentenceList->start->data, 80);
-		DrawText(firstOption->sentenceList->start->next->data, 100);
+		DrawText(firstOption.sentenceList->start->data, 80);
+		DrawText(firstOption.sentenceList->start->next->data, 100);
 		//
 
 		//TODO 3: Detect if 1 or 2 are being pressed, and for each case, set the progress stage we are in and update the dialogue
