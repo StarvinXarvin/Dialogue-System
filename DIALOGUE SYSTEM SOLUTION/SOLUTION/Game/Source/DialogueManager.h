@@ -79,12 +79,12 @@ public:
 	DialogueProgress progress;
 	int questionEnabled;
 
-	Dialogue* firstQuestion;
-	Dialogue* firstOption;
-	Dialogue* answerA;
-	Dialogue* answerB;
-	Dialogue* firstQuestionA;
-	Dialogue* firstQuestionB;
+	Dialogue firstQuestion;
+	Dialogue firstOption;
+	Dialogue answerA;
+	Dialogue answerB;
+	Dialogue firstQuestionA;
+	Dialogue firstQuestionB;
 
 };
 
