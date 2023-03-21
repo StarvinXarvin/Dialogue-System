@@ -107,10 +107,10 @@ bool DialogueManager::DrawText(SString s, uint yoffset){
 						break;
 					}
 				}
-				app->fonts->BlitText(textbox.x + 20, textbox.y + 20 + 20*(i/54) + yoffset, fontId, s1.GetString(), false);
+				app->fonts->BlitText(textbox.x + 20, textbox.y + 20 + 20*(i/ MAX_CHARACTERS_IN_LINE) + yoffset, fontId, s1.GetString(), false);
 			}
 			else {
-				app->fonts->BlitText(textbox.x + 20, textbox.y + 20 + 20 * (i / 54) + yoffset, fontId, s.GetString(), false);
+				app->fonts->BlitText(textbox.x + 20, textbox.y + 20 + 20 * (i / MAX_CHARACTERS_IN_LINE) + yoffset, fontId, s.GetString(), false);
 			}
 		}
 
