@@ -167,6 +167,7 @@ bool DialogueManager::ResetDialogue() {
 bool DialogueManager::CleanUp()
 {
 
+	delete firstOption;
 	delete firstQuestion;
 	delete firstQuestionA;
 	delete firstQuestionB;
