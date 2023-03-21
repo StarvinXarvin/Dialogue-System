@@ -1,6 +1,8 @@
 #ifndef __DIALOGUEMANAGER_H__
 #define __DIALOGUEMANAGER_H__
 
+#define MAX_CHARACTERS_IN_LINE 54
+
 #include <iostream>
 #include <queue>
 
