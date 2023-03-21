@@ -107,6 +107,26 @@ This code is structured in “TODOs”. Basically, the reader will be commanded 
 
 First of all, let’s explain the code. The only files that will be needed are DialogueManager.cpp, DialogueManager.h and GuiButton.cpp.
 
+```cpp
+
+class Dialogue {
+
+public:
+
+   Dialogue(){
+       sentenceList = new List<SString>;
+   }
+   Dialogue(List<SString>* sentences) {
+       sentenceList = sentences;
+   }
+   
+public:
+   List<SString>* sentenceList;
+   
+};
+
+```
+
 ![](https://github.com/StarvinXarvin/Dialog-System/blob/main/docs/claseDialogo.png?raw=true)
  
 The “Dialogue” class has a list of strings, which will be the sentences that will be displayed. In this code, space will be used to further the dialogue and change the sentence. When we reach the end of the list, the dialogue ends, and after it, one of three things can happen: The textbox closes and the dialogue ends, we are presented with a selection of options, or another dialogue takes its place. 
