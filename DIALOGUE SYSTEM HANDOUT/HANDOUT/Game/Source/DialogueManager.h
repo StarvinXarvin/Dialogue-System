@@ -62,7 +62,7 @@ public:
 
 	bool DrawText(SString s, uint yoffset);
 
-	bool SetDialogue(Dialogue* dialogue);
+	bool SetDialogue(Dialogue dialogue);
 
 	bool UpdateDialogue();
 

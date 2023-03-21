@@ -49,7 +49,7 @@ bool DialogueManager::Start()
 
 	fontId = app->fonts->Load("Assets/Fonts/defaultfont.png", "!,_./0123456789;?ABCDEFGHIJKLMNOPQRSTUVWXYZ ", 1);
 
-	sentenceQueue = firstQuestion->sentenceList->start;
+	sentenceQueue = firstQuestion.sentenceList->start;
 
 	return true;
 }
@@ -150,7 +150,7 @@ bool DialogueManager::UpdateDialogue() {
 
 bool DialogueManager::ResetDialogue() {
 	progress = GREETING;
-	sentenceQueue = firstQuestion->sentenceList->start;
+	sentenceQueue = firstQuestion.sentenceList->start;
 	questionEnabled = false;
 	dialogueEnabled = false;
 
