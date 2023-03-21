@@ -139,7 +139,7 @@ Dialogue firstQuestionB;
  ```
  
  ```cpp
-firstQuestion.sentenceList->Add("MAY I INTEREST YOU IN A GLASS OF MILK, COOKIES AND A BALL OF YOUR FAVORITE ICE CREAM FLAVOR? OR PERHAPS YOU'D RATHER GO TO BED ALREADY, SIR?");
+firstQuestion.sentenceList->Add("MAY I INTEREST YOU IN A GLASS OF MILK, COOKIES AND A BALL OF YOUR FAVORITE ICE CREAM FLAVOR? OR PERHAPS YOU WOULD RATHER GO TO BED ALREADY, SIR?");
 
 firstOption.sentenceList->Add("/PRESS 1/ FOOD");
 firstOption.sentenceList->Add("/PRESS 2/ BED");
