@@ -26,12 +26,12 @@ bool DialogueManager::Start()
 
 	playerName = "CORNELLIUS";
 
-	//NOTE: Given the size of the font and dialogue box, the maximum length of a sentence is 54
+	//NOTE: Given the size of the font and dialogue box, the maximum length of a sentence is 54 (MAX_CHARACTERS_IN_LINE)
 
 	//TODO 5: Substitute "Traveler" by "playerName"
 	firstQuestion.sentenceList->Add((SString)"GREETINGS, " + playerName + "! I SEE YOU ARE VERY TIRED FROM YOUR ADVENTURES.");
 	//
-	firstQuestion.sentenceList->Add("MAY I INTEREST YOU IN A GLASS OF MILK, COOKIES AND A BALL OF YOUR FAVORITE ICE CREAM FLAVOR? OR PERHAPS YOU'D RATHER GO TO BED ALREADY, SIR?");
+	firstQuestion.sentenceList->Add("MAY I INTEREST YOU IN A GLASS OF MILK, COOKIES AND A BALL OF YOUR FAVORITE ICE CREAM FLAVOR? OR PERHAPS YOU WOULD RATHER GO TO BED ALREADY, SIR?");
 
 	firstOption.sentenceList->Add("/PRESS 1/ FOOD");
 	firstOption.sentenceList->Add("/PRESS 2/ BED");
@@ -97,10 +97,10 @@ bool DialogueManager::DrawTextbox() {
 
 bool DialogueManager::DrawText(SString s, uint yoffset){
 
-		for (int i = 0; i <= s.GetCapacity(); i += 54) {
-			if (s.GetCapacity() > 54) {
+		for (int i = 0; i <= s.GetCapacity(); i += MAX_CHARACTERS_IN_LINE) {
+			if (s.GetCapacity() > MAX_CHARACTERS_IN_LINE) {
 				SString s1 = s;
-				for (int i = 53; i >= 0; i--) {
+				for (int i = MAX_CHARACTERS_IN_LINE-1; i >= 0; i--) {
 					if (s.GetString()[i] == ' ') {
 						s.Cut(0, i);
 						s1.Cut(i+1);
