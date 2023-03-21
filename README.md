@@ -130,23 +130,23 @@ The “Dialogue” class has a list of strings, which will be the sentences that
 We manage all of these dialogues in the dialogue manager. There, we have declared a bunch of dialogues that we will use in the interaction we are going to code. 
 
 ```cpp
-	Dialogue firstQuestion;
-	Dialogue firstOption;
-	Dialogue answerA;
-	Dialogue answerB;
-	Dialogue firstQuestionA;
-	Dialogue firstQuestionB;
+Dialogue firstQuestion;
+Dialogue firstOption;
+Dialogue answerA;
+Dialogue answerB;
+Dialogue firstQuestionA;
+Dialogue firstQuestionB;
  ```
  
  ```cpp
- 	firstQuestion.sentenceList->Add("MAY I INTEREST YOU IN A GLASS OF MILK, COOKIES AND A BALL OF YOUR FAVORITE ICE CREAM FLAVOR? OR PERHAPS YOU'D RATHER GO TO BED ALREADY, SIR?");
+firstQuestion.sentenceList->Add("MAY I INTEREST YOU IN A GLASS OF MILK, COOKIES AND A BALL OF YOUR FAVORITE ICE CREAM FLAVOR? OR PERHAPS YOU'D RATHER GO TO BED ALREADY, SIR?");
 
-	firstOption.sentenceList->Add("/PRESS 1/ FOOD");
-	firstOption.sentenceList->Add("/PRESS 2/ BED");
+firstOption.sentenceList->Add("/PRESS 1/ FOOD");
+firstOption.sentenceList->Add("/PRESS 2/ BED");
 
-	answerA.sentenceList->Add("PERFECT! I WILL PREPARE YOUR FOOD RIGHT AWAY, SIR.");
+answerA.sentenceList->Add("PERFECT! I WILL PREPARE YOUR FOOD RIGHT AWAY, SIR.");
 
-	answerB.sentenceList->Add("GREAT! LET ME GET THE KEY TO YOUR ROOM AND YOU WILL BE ALL SET, SIR.");
+answerB.sentenceList->Add("GREAT! LET ME GET THE KEY TO YOUR ROOM AND YOU WILL BE ALL SET, SIR.");
 ```
 
 In  the dialogue manager, we also have some auxiliary variables and functions, all declared in dialogueManager.h and then defined in dialogueManager.cpp
