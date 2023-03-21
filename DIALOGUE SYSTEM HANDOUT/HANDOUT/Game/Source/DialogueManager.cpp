@@ -24,35 +24,28 @@ bool DialogueManager::Start()
 	textbox = { x / 2 - 450, y / 2, 900, 200 };
 	progress = GREETING;
 
-	firstQuestion = new Dialogue;
-	answerA = new Dialogue;
-	answerB = new Dialogue;
-	firstQuestionA = new Dialogue;
-	firstQuestionB = new Dialogue;
-	firstOption = new Dialogue;
-
 	playerName = "CORNELLIUS";
 
 	//NOTE: Given the size of the font and dialogue box, the maximum length of a sentence is 54
 
 	//TODO 5: Substitute "Traveler" by "playerName"
-	firstQuestion->sentenceList->Add("GREETINGS, TRAVELER! I SEE YOU ARE VERY TIRED FROM YOUR ADVENTURES.");
+	firstQuestion.sentenceList->Add("GREETINGS, TRAVELER! I SEE YOU ARE VERY TIRED FROM YOUR ADVENTURES.");
 	//
 
-	firstQuestion->sentenceList->Add("MAY I INTEREST YOU IN A GLASS OF MILK, COOKIES AND A BALL OF YOUR FAVORITE ICE CREAM FLAVOR? OR PERHAPS YOU'D RATHER GO TO BED ALREADY, SIR?");
+	firstQuestion.sentenceList->Add("MAY I INTEREST YOU IN A GLASS OF MILK, COOKIES AND A BALL OF YOUR FAVORITE ICE CREAM FLAVOR? OR PERHAPS YOU'D RATHER GO TO BED ALREADY, SIR?");
 
-	firstOption->sentenceList->Add("/PRESS 1/ FOOD");
-	firstOption->sentenceList->Add("/PRESS 2/ BED");
+	firstOption.sentenceList->Add("/PRESS 1/ FOOD");
+	firstOption.sentenceList->Add("/PRESS 2/ BED");
 
-	answerA->sentenceList->Add("PERFECT! I WILL PREPARE YOUR FOOD RIGHT AWAY, SIR.");
+	answerA.sentenceList->Add("PERFECT! I WILL PREPARE YOUR FOOD RIGHT AWAY, SIR.");
 
-	answerB->sentenceList->Add("GREAT! LET ME GET THE KEY TO YOUR ROOM AND YOU WILL BE ALL SET, SIR.");
+	answerB.sentenceList->Add("GREAT! LET ME GET THE KEY TO YOUR ROOM AND YOU WILL BE ALL SET, SIR.");
 
-	firstQuestionA->sentenceList->Add(playerName + ", SIR, PLEASE ALLOW ME SOME TIME TO PREPARE THE DISHES!");
-	firstQuestionA->sentenceList->Add("THERE IS A STOOL OVER THERER FOR YOU TO WAIT ON.");
+	firstQuestionA.sentenceList->Add(playerName + ", SIR, PLEASE ALLOW ME SOME TIME TO PREPARE THE DISHES!");
+	firstQuestionA.sentenceList->Add("THERE IS A STOOL OVER THERER FOR YOU TO WAIT ON.");
 
-	firstQuestionB->sentenceList->Add("IN A MINUTE, SIR!");
-	firstQuestionB->sentenceList->Add("THE PREVIOUS HOST LEFT RATHER QUICKLY, I DO NOT KNOW WHERE THE MAN LEFT THOSE DARN KEYS!");
+	firstQuestionB.sentenceList->Add("IN A MINUTE, SIR!");
+	firstQuestionB.sentenceList->Add("THE PREVIOUS HOST LEFT RATHER QUICKLY, I DO NOT KNOW WHERE THE MAN LEFT THOSE DARN KEYS!");
 
 	fontId = app->fonts->Load("Assets/Fonts/defaultfont.png", "!,_./0123456789;?ABCDEFGHIJKLMNOPQRSTUVWXYZ ", 1);
 
@@ -116,9 +109,9 @@ bool DialogueManager::DrawText(SString s, uint yoffset){
 
 }
 
-bool DialogueManager::SetDialogue(Dialogue* dialogue) {
+bool DialogueManager::SetDialogue(Dialogue dialogue) {
 
-	sentenceQueue = dialogue->sentenceList->start;
+	sentenceQueue = dialogue.sentenceList->start;
 
 	return true;
 }
@@ -166,13 +159,6 @@ bool DialogueManager::ResetDialogue() {
 
 bool DialogueManager::CleanUp()
 {
-
-	delete firstOption;
-	delete firstQuestion;
-	delete firstQuestionA;
-	delete firstQuestionB;
-	delete answerA;
-	delete answerB;
 
 	return true;
 }
